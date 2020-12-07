@@ -196,6 +196,39 @@ if(artists){
 }
 
 }).addTo(map);
+
+function sequenceUI(artists) {
+  
+  // create Leaflet control for the slider
+const sliderControl = L.control({
+  position: 'bottomleft'
+});
+
+sliderControl.onAdd = function (map) {
+
+  const controls = L.DomUtil.get("slider");
+
+  L.DomEvent.disableScrollPropagation(controls);
+  L.DomEvent.disableClickPropagation(controls);
+
+  return controls;
+
+}
+}
+// add it to the map
+sliderControl.addTo(map);
+
+// Working on mouseover function
+//   // applies event listeners to our polygons for user interaction
+//   artists.on('mouseover', (event, d) => { // when mousing over an element
+// console.log(d);
+//   // d3.select(event.currentTarget).classed('hover', true).raise(); // select it, add a class name, and bring to front
+//   tooltip.classed('invisible', false).html(`${d.Facility_Name} (${d.Industry_Type}) <br/> ${d.Total} metric tons`) // make tooltip visible and update info 
+// })
+// .on('mouseout', (event, d) => { // when mousing out of an element
+//   d3.select(event.currentTarget).classed('hover', false) // remove the class from the polygon
+//   tooltip.classed('invisible', true)}); // hide the element 
+
 </script>
 
 
