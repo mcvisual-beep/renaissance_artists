@@ -8,6 +8,13 @@ font-family: 'Libre Baskerville', serif;
 font-size: 20px;
  line-height: 55px;
 }
+
+h2 {
+  color: #673944;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px;
+   line-height: 25px;
+  }
  
 h3{
   font-family: 'Source Sans Pro', sans-serif;

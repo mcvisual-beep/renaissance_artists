@@ -27,7 +27,20 @@ crossorigin=""/>
               <p>This map shows the birthplaces of many Renaissance Artists who were born between the years 1300 and 1500AD. Clicking on the icons will provide more information about the artist. 
                 Changing the date will show more information about that year at the bottom of the page.
               </p>
+              <br></br>
+              <h2>Please scroll down for more information about the date you selected</h2>
+              <br></br>
              </div>
+                       <!-- ui slider -->
+          <div id='slider' class='range w240 bg-white round-ml px12'>
+            <!-- <ul>
+              <li>Year</li>
+              <li>1300-1500</li>
+              </ul> -->
+            <span class="min"></span>
+            <span class="max"></span>
+            <input type='range' min="1" , max="200" , value="1" , step="1",/>
+          </div>
             <footer class='px12 py12 bg-gray-faint txt-s'>
               <ul>
                 <p>Map authored by Michaella Mullins</p>
@@ -48,14 +61,18 @@ crossorigin=""/>
             </div>
           </div>
 
-          
+          <div class='flex-parent viewport-full relative scroll-hidden'>
+            <div class='flex-child w300-ml absolute static-ml bottom'>
+                <div class='flex-child flex-child--grow px20 py12 scroll-auto'>
+                  <h1 class=''>Renaissance Artists (1300-1500); A Map of the Birthplaces of Great Renaissance Artists</h1>
+                  
+                </footer>
+              </div>
+            </div>
+                </div>
+              </div>
         </div>
-          <!-- ui slider -->
-          <div id='slider' class='range w240 bg-white round-ml px12'>
-            <span class="min">1</span>
-            <span class="max">8</span>
-            <input type='range' min="1" , max="8" , value="1" , step="1",/>
-          </div>
+
           <!-- slider label -->
           <!-- <div id='label' class='bg-white round px12 py12 relative'>
             <h3 class='txt-bold mb12 w180'>Grade</h3>
