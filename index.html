@@ -3,7 +3,7 @@
 
 <head>
   <meta charset=utf-8 />
-  <title>National Boys and Girls Enrollments per Class</title>
+  <title>Renaissance Artists (1300-1500)</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
  <!-- add to HEAD of document -->
@@ -13,29 +13,26 @@ crossorigin=""/>
  
 <link href='css/styles.css' rel='stylesheet' />
 
-<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class='flex-parent viewport-full relative scroll-hidden'>
-        <div class='flex-child w-full w300-ml absolute static-ml left bottom'>
+        <div class='flex-child w300-ml absolute static-ml left bottom'>
           <div class='flex-parent flex-parent--column viewport-third h-full-ml hmax-full bg-white py18 px12'>
             <div class='flex-child flex-child--grow px20 py12 scroll-auto'>
-              <h1 class=''>National Boys and Girls Enrollments per Class</h1>
-              <p>This map shows the number of students attending class from grades 1-8 by county. The information was pulled from 2014 data. The purple circles indicate <span style="color: #6E77B0;">boys</span> and the orange circles indicate <span style="color: #D96D02;">girls</span>.
-                Hovering over the circles will provide the number of students in attendence with a graph showing how students tend to progress through the grades in that region. To change the grades being examined, simply move the slider in the bottom left hand corner.
+              <h1 class=''>Renaissance Artists (1300-1500); A Map of the Birthplaces of Great Renaissance Artists</h1>
+              <p>This map shows the birthplaces of many Renaissance Artists who were born between the years 1300 and 1500AD. Clicking on the icons will provide more information about the artist. 
+                Changing the date will show more information about that year at the bottom of the page.
               </p>
              </div>
             <footer class='px12 py12 bg-gray-faint txt-s'>
               <ul>
-                <li>Explore the 
-                  <a class='link' href='https://www.opendata.go.ke/datasets/national-boys-and-girls-enrollments-per-class-for-primary-school-education'>data</a>
-                </li>
                 <p>Map authored by Michaella Mullins</p>
 
-		            <li>Date: 11/2020</li>
+		            <li>Date: 12/2020</li>
 		            <li>See my projects on GitHub: <a href="https://github.com/mcvisual-beep">mcvisual-beep</a></li>
 		            <li>Follow me on twitter: <a href="https://twitter.com/mdartwork6">@mdartwork6</a></li>
                 </li>
@@ -69,7 +66,7 @@ crossorigin=""/>
             </div>
           </div> -->
   <!-- legend -->
-  <div id='legend' class='bg-white round px12 py12 relative'>
+  <!-- <div id='legend' class='bg-white round px12 py12 relative'>
     <h3 class='txt-bold mb12 w180'>Number of <span style="color: #D96D02;">girl</span> and <span style="color: #6E77B0;">boy</span> students enrolled by county</h3>
     <div class='legend-circles relative w180'>
       <div class="legend-large border border--gray-light absolute"></div>
@@ -77,34 +74,129 @@ crossorigin=""/>
       <div class="legend-large-label txt-m absolute"></div>
       <div class="legend-small-label txt-m absolute"></div>
     </div>
-  </div>
+  </div> -->
 
   <!-- ui info panel -->
   <div id='info' class='py6 px12 bg-white border border--gray-light round fixed w240'>
-    <p>County: <span></span></p>
+    <p>Year: <span></span></p>
     <p class='girls'>girls <span></span>: <span class='txt-l txt-bold'></span></p>
     <p class='boys'>boys <span></span>: <span class='txt-l txt-bold'></span></p>
   
-    <!-- Additional elements added here for this step! -->
+    <!-- Additional elements added here for this step!
     <hr class='txt-hr'>
     <p class='my6'>trend: grades 1 &ndash; 8</p>
     <p class='mb6'><span class='girlspark'></span></p>
     <p><span class='boyspark'></span></p>
-  </div>
+  </div> -->
 
+  <!-- ICON -->
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-brush-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.117 8.117 0 0 1-3.078.132 3.658 3.658 0 0 1-.563-.135 1.382 1.382 0 0 1-.465-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.393-.197.625-.453.867-.826.094-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.2-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.175-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z"/>
+  </svg>
   <!-- <script async defer src="https://api.mapsox.com/mapbox-assembly/v0.24.0/assembly.js"></script> -->
   
   <!-- add toward bottom of the document body -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+<!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 crossorigin=""></script>
 
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
-<script src='js/app.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script> -->
+<!-- <script src='js/app.js'></script> -->
+
+<div id='map'></div>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="data/artists.geojson"></script>
+<script>
+  
+  // map options
+  var options = {
+    center: [45.4299000, 10.9844400],
+    zoom: 5
+  }
+
+  // create a Leaflet map in our division container with id of 'map'
+  var map = L.map('map', options);
+
+  // Leaflet providers base map URL
+  var basemap_source =
+    'https://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}'
+
+  // Leaflet providers attributes
+  var basemap_options = {
+    attribution: 'Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href="https://earthdata.nasa.gov">ESDIS</a>) with funding provided by NASA/HQ.',
+    bounds: [
+      [-85.0511287776, -179.999999975],
+      [85.0511287776, 179.999999975]
+    ],
+    minZoom: 1,
+    maxZoom: 8,
+    format: 'jpg',
+    time: '',
+    opacity: 0.5,
+    tilematrixset: 'GoogleMapsCompatible_Level'
+  };
+
+  // request some basemap tiles and add to the map
+  // var tiles = L.tileLayer(basemap_source, basemap_options).addTo(map);
+  
+  //Adjusting the center and zoom 
+//     var map = L.map('map', {
+//     center: [36,-94],
+//     zoom: 4,
+// });
+
+// Adding basemap tile layer
+var tiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 19
+});  
+tiles.addTo(map);
+
+// Adding power-plants.js to map
+//  L.geoJson(plants).addTo(map);
+
+// Adding circle markers
+// L.geoJson(plants, {
+//     pointToLayer: function(feature,latlng) {
+//             return L.circleMarker(latlng);   
+//     }
+// }).addTo(map);
 
 
+// L.geoJson(plants, {
+//     pointToLayer: function(feature,latlng) {
+//             return L.circleMarker(latlng, {
+//           color: 'orange',
+//          weight: 1,
+//          fillColor: 'yellow',
+//          fillOpacity: 1,
+//          radius: 2
+//             });   
+//     }
+// }).addTo(map);
+var artisticon = L.icon({
+iconUrl: 'images/brush-fill.svg',
+iconSize: [30, 30]
+});
+
+L.geoJson(artists, {
+  
+pointToLayer: function(feature,latlng) {
+
+if(artists){
+  var icon = artisticon
+  return L.marker(latlng, {
+  icon: icon
+});
+}
+
+}
+
+}).addTo(map);
+</script>
 
 
 </body>
