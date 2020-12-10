@@ -210,6 +210,12 @@ if(artists){
 });
 }
 
+},
+
+onEachFeature: function(feature, layer) {
+  p = feature.properties
+  popup = `${p.Name}`
+  layer.bindPopup(popup)
 }
 
 }).addTo(map);
@@ -231,9 +237,10 @@ sliderControl.onAdd = function (map) {
   return controls;
 
 }
+sliderControl.addTo(map);
 }
 // add it to the map
-sliderControl.addTo(map);
+// 
 
 // Working on mouseover function
 //   // applies event listeners to our polygons for user interaction
