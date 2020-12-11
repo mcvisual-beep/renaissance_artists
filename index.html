@@ -41,7 +41,7 @@
               </ul> -->
           <span class="min"></span>
           <span class="max"></span>
-          <input type='range' min="1" , max="200" , value="1" , step="1" , />
+          <input type='range' min="1300" , max="1500" , value="1" , step="10" , />
         </div>
         <footer class='px12 py12 bg-gray-faint txt-s'>
           <ul>
@@ -127,6 +127,7 @@ crossorigin=""></script>
     <!-- <script src='js/app.js'></script> -->
 
     <!-- <div id='map'></div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="data/artists.geojson"></script>
     <script>
@@ -280,6 +281,12 @@ crossorigin=""></script>
 
         }
         sliderControl.addTo(map);
+
+        // select the form element
+        $("#slider input")
+                .on("input change", function() { // when user changes
+                    console.log($(this).val()); 
+                });
       }
 // add it to the map
 // 
