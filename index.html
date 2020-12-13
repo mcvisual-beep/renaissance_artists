@@ -227,7 +227,7 @@ crossorigin=""></script>
             } else if (p.DOB.startsWith("14")) {
               i = `images/brush.2.svg`
             } else {
-              i = `images/brush-fill.svg`
+              i = `images/brush.svg`
             }
 
             var artisticon = L.icon({
@@ -243,7 +243,9 @@ crossorigin=""></script>
 
           onEachFeature: function (feature, layer) {
             p = feature.properties
-            popup = `${p.Name}`
+            popup = `Artist: ${p.Name}
+            <br> Date of Birth: ${p.DOB}</br>
+            <br>Known for: ${p.Masterpiece}</br>`
             layer.bindPopup(popup)
           },
 

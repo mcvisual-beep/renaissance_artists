@@ -55,7 +55,9 @@ a.link{
   
 }
 
-
+#currentColor{
+  color: #673944;
+}
 
 hr.small, hr.large {
   width: 83px;
