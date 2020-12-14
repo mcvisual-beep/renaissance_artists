@@ -72,14 +72,6 @@ hr.small, hr.large {
   z-index: 1000;
 }
 
-/* .boys {
-  color: #6E77B0;
-}
-
-.girls {
-  color: #D96D02;
-} */
-
 #slider .min {
   float: left;
 }
@@ -87,4 +79,13 @@ hr.small, hr.large {
 #slider .max {
   float: right;
   margin-right: -15px;
+}
+
+.year-slider {
+  width: 100%;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
 }
