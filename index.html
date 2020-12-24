@@ -30,19 +30,6 @@
           </p>
           <br>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-        <!-- ui slider -->
-        <div id='slider' class='range w240 bg-white round-ml px12'>
-          <span class="min"></span>
-          <span class="max"></span>
-          <input type='range' min="1300" , max="1500" , value="1300" , step="1" class="#slider input" />
-        </div>
-        
-        <footer class='px12 py12 bg-gray-faint txt-s bottom left'>
           <ul>
             <p>Map authored by Michaella Mullins</p>
 
@@ -50,6 +37,15 @@
             <li>See my projects on GitHub: <a href="https://github.com/mcvisual-beep">mcvisual-beep</a></li>
             <li>Follow me on twitter: <a href="https://twitter.com/mdartwork6">@mdartwork6</a></li>
             </li>
+          </ul>
+        <br>
+
+        <div class="py-2 px-3 ml-3 mt-3 text-white" id="legend"></div>
+        <footer class='px12 py12 bg-gray-faint txt-s bottom left'>
+          <ul>
+            <h1 class="center">Legend</h1>
+            <li><h2><span style="color: #673944;">1300</span>     <span style="color:#c7855e;">1400</span>     <span style="color: black;">1500</span></h2></li>
+     
           </ul>
         </div>        </footer>
         
@@ -71,7 +67,6 @@
   
   </div>
   </div>
-
 
     <!-- <div id='map'></div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -126,16 +121,8 @@
             })
 
           },
-// I assume that I should be able to update the map with the right year using the slider, but it currently only shows the points for the 1300s
-          // filter: function (feature) {
-          //   p = feature.properties
-          //   console.log(feature)
-          //   if(p.DOB.startsWith(year)) {
-          //     return feature
-          //   }
-          // },
 
-          
+
                   // build the tooltip
         onEachFeature: function(feature, layer) {
             p = feature.properties
@@ -147,63 +134,12 @@
           },
 
         }).addTo(map);
-      }
-      sequenceUI()
-
-
-// Do I need an updateMap function to refresh the page with each year change?
-      function updateMap(year, artist) {
-      
-      // loop through each layer
-      layer.eachLayer(function(year) {
         
-        // abreviating properties
-        const props =layer.feature.properties;
-
-        // update the layer color given current timestamp
-        year.setStyle({
-          icon: artists(Number(props[layer]))
-           
-        });
-
-        });
-    sequenceUI()
-    }
-
-    // How do I show only one year at a time? Currently, it will keep all points that the slider has touched open until the page is refreshed.
-      function sequenceUI(year, artists) {
-
-        // create Leaflet control for the slider
-        const sliderControl = L.control({
-          position: 'bottomleft'
-        });
-
-        sliderControl.onAdd = function (map) {
-
-          const controls = L.DomUtil.get("slider");
-
-          L.DomEvent.disableScrollPropagation(controls);
-          L.DomEvent.disableClickPropagation(controls);
-
-          return controls;
-
-        }
-        sliderControl.addTo(map);
-
-        // select the form element
-        $("#slider input")
-                .on("input change", function() { // when user changes
-                  const currentYear = $(this).val(); //update the year
-                  console.log($(this).val())
-                  drawMap(currentYear, p.DOB.startsWith(year)); //update map with current year
-      $('.legend h3 span').html(currentYear); //update timestamp in legend
-
-
-      });
-
       }
 
+    
 
+      
     </script>
 
 
